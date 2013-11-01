@@ -2,6 +2,7 @@ YSTransition
 ============
 
 Custom UIViewController &amp; UINavigationController with transition from Right, Left, Top and Bottom
+Supported iOS6, 7
 
 ## YSViewController
 Customized presentViewController from Right, Left, Top and Bottom
@@ -63,6 +64,16 @@ Call `popViewControllerWithTransitionType:` method when returning your viewContr
 
 ```
 [(YSNavigationController *)self.navigationController popViewControllerWithTransitionType:YSTransitionTypeFromRight];
+```
+
+## Parameter Settings
+
+```
+// Animation duration
+self.transitionDuration = 0.4f;
+
+// Custom function
+self.timingFunction = [CAMediaTimingFunction functionWithControlPoints: 0.075 : 0.82 : 0.165 : 1.0];
 ```
 
 ## License
