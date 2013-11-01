@@ -4,13 +4,13 @@ YSTransition
 Custom UIViewController &amp; UINavigationController with transition from Right, Left, Top, Bottom
 
 ## YSViewController
-Customized presentViewController from Right, from Left, from Top, from Bottom
+Customized presentViewController from Right, Left, Top and Bottom
 
 ![YSViewController](http://s13.postimg.org/wm2cdqqon/push_image.png)
 
 
 ## YSNavigationController
-Customized pushViewController from Right, from Left, from Top, from Bottom
+Customized pushViewController from Right, Left, Top and Bottom
 
 ![YSNavigationController](http://s21.postimg.org/d1e8yzson/present_image.png)
 
