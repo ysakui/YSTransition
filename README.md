@@ -1,7 +1,7 @@
 YSTransition
 ============
 
-Custom UIViewController &amp; UINavigationController with transition from Right, Left, Top, Bottom
+Custom UIViewController &amp; UINavigationController with transition from Right, Left, Top and Bottom
 
 ## YSViewController
 Customized presentViewController from Right, Left, Top and Bottom
