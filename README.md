@@ -21,7 +21,7 @@ Customized pushViewController from Right, from Left, from Top, from Bottom
 
 ## Usage of YSViewController
 
-inherited the YSViewController in your viewcontroller
+Inherit the YSViewController in your viewcontroller
 
 ```
 #import "YSViewController.h"
