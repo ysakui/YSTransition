@@ -23,9 +23,9 @@
 		DB774FC21823BBE9008E6F29 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB774FC11823BBE9008E6F29 /* PushViewController.m */; };
 		DB774FC51823BBFF008E6F29 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB774FC41823BBFF008E6F29 /* ModalViewController.m */; };
 		DB774FC81823BC15008E6F29 /* UIColor+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = DB774FC71823BC15008E6F29 /* UIColor+Random.m */; };
-		DB774FCC1823BC55008E6F29 /* YSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB774FCB1823BC55008E6F29 /* YSViewController.m */; };
-		DB774FCF1823BC6B008E6F29 /* YSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB774FCE1823BC6B008E6F29 /* YSNavigationController.m */; };
-		DB774FD21823BCF9008E6F29 /* YSTransitionUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = DB774FD11823BCF9008E6F29 /* YSTransitionUtil.m */; };
+		DB774FD91823C1BC008E6F29 /* YSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB774FD41823C1BC008E6F29 /* YSNavigationController.m */; };
+		DB774FDA1823C1BC008E6F29 /* YSTransitionUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = DB774FD61823C1BC008E6F29 /* YSTransitionUtil.m */; };
+		DB774FDB1823C1BC008E6F29 /* YSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB774FD81823C1BC008E6F29 /* YSViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,12 +63,12 @@
 		DB774FC41823BBFF008E6F29 /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
 		DB774FC61823BC15008E6F29 /* UIColor+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Random.h"; sourceTree = "<group>"; };
 		DB774FC71823BC15008E6F29 /* UIColor+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Random.m"; sourceTree = "<group>"; };
-		DB774FCA1823BC55008E6F29 /* YSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YSViewController.h; path = YSTransition/YSViewController.h; sourceTree = "<group>"; };
-		DB774FCB1823BC55008E6F29 /* YSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YSViewController.m; path = YSTransition/YSViewController.m; sourceTree = "<group>"; };
-		DB774FCD1823BC6B008E6F29 /* YSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YSNavigationController.h; path = YSTransition/YSNavigationController.h; sourceTree = "<group>"; };
-		DB774FCE1823BC6B008E6F29 /* YSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YSNavigationController.m; path = YSTransition/YSNavigationController.m; sourceTree = "<group>"; };
-		DB774FD01823BCF9008E6F29 /* YSTransitionUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YSTransitionUtil.h; path = YSTransition/YSTransitionUtil.h; sourceTree = "<group>"; };
-		DB774FD11823BCF9008E6F29 /* YSTransitionUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YSTransitionUtil.m; path = YSTransition/YSTransitionUtil.m; sourceTree = "<group>"; };
+		DB774FD31823C1BC008E6F29 /* YSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YSNavigationController.h; path = ../../YSTransition/YSNavigationController.h; sourceTree = "<group>"; };
+		DB774FD41823C1BC008E6F29 /* YSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YSNavigationController.m; path = ../../YSTransition/YSNavigationController.m; sourceTree = "<group>"; };
+		DB774FD51823C1BC008E6F29 /* YSTransitionUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YSTransitionUtil.h; path = ../../YSTransition/YSTransitionUtil.h; sourceTree = "<group>"; };
+		DB774FD61823C1BC008E6F29 /* YSTransitionUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YSTransitionUtil.m; path = ../../YSTransition/YSTransitionUtil.m; sourceTree = "<group>"; };
+		DB774FD71823C1BC008E6F29 /* YSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YSViewController.h; path = ../../YSTransition/YSViewController.h; sourceTree = "<group>"; };
+		DB774FD81823C1BC008E6F29 /* YSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YSViewController.m; path = ../../YSTransition/YSViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,12 +177,12 @@
 		DB774FC91823BC1E008E6F29 /* YSTransition */ = {
 			isa = PBXGroup;
 			children = (
-				DB774FCA1823BC55008E6F29 /* YSViewController.h */,
-				DB774FCB1823BC55008E6F29 /* YSViewController.m */,
-				DB774FCD1823BC6B008E6F29 /* YSNavigationController.h */,
-				DB774FCE1823BC6B008E6F29 /* YSNavigationController.m */,
-				DB774FD01823BCF9008E6F29 /* YSTransitionUtil.h */,
-				DB774FD11823BCF9008E6F29 /* YSTransitionUtil.m */,
+				DB774FD31823C1BC008E6F29 /* YSNavigationController.h */,
+				DB774FD41823C1BC008E6F29 /* YSNavigationController.m */,
+				DB774FD51823C1BC008E6F29 /* YSTransitionUtil.h */,
+				DB774FD61823C1BC008E6F29 /* YSTransitionUtil.m */,
+				DB774FD71823C1BC008E6F29 /* YSViewController.h */,
+				DB774FD81823C1BC008E6F29 /* YSViewController.m */,
 			);
 			name = YSTransition;
 			sourceTree = "<group>";
@@ -284,12 +284,12 @@
 			files = (
 				DB774FC81823BC15008E6F29 /* UIColor+Random.m in Sources */,
 				DB774F9F1823BB6B008E6F29 /* AppDelegate.m in Sources */,
-				DB774FCC1823BC55008E6F29 /* YSViewController.m in Sources */,
-				DB774FCF1823BC6B008E6F29 /* YSNavigationController.m in Sources */,
+				DB774FDA1823C1BC008E6F29 /* YSTransitionUtil.m in Sources */,
 				DB774FBF1823BBDE008E6F29 /* BaseViewController.m in Sources */,
 				DB774FC51823BBFF008E6F29 /* ModalViewController.m in Sources */,
+				DB774FD91823C1BC008E6F29 /* YSNavigationController.m in Sources */,
+				DB774FDB1823C1BC008E6F29 /* YSViewController.m in Sources */,
 				DB774FC21823BBE9008E6F29 /* PushViewController.m in Sources */,
-				DB774FD21823BCF9008E6F29 /* YSTransitionUtil.m in Sources */,
 				DB774F9B1823BB6B008E6F29 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
