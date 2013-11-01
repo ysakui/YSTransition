@@ -29,13 +29,13 @@ Inherit the YSViewController in your viewcontroller
 @interface YourViewController : YSViewController
 ```
 
-call `presentViewController:withTransitionType:completion:` method if presenting your viewController.
+Call `presentViewController:withTransitionType:completion:` method when presenting your viewController.
 
 ```
 [self presentViewController:yourViewController withTransitionType:YSTransitionTypeFromRight completion:nil];
 ```
 
-call `dismissViewControllerWithTransitionType:completion:` method if dismissing your viewController.
+Call `dismissViewControllerWithTransitionType:completion:` method when dismissing your viewController.
 
 ```
 [self dismissViewControllerWithTransitionType:YSTransitionTypeFromLeft completion:nil];
@@ -44,7 +44,7 @@ call `dismissViewControllerWithTransitionType:completion:` method if dismissing 
 
 ## Usage of YSNavigationController
 
-create a YSNavigationController
+Create a YSNavigationController
 
 ```
 #import "YSNavigationController.h"
@@ -53,13 +53,13 @@ UIViewController *viewController = [[UIViewController alloc] init];
 YSNavigationController *navigationController = [[YSNavigationController alloc] initWithRootViewController:viewController];
 ```
 
-call `pushViewController:withTransitionType:` method if pushing your viewController.
+Call `pushViewController:withTransitionType:` method when pushing your viewController.
 
 ```
 [(YSNavigationController *)self.navigationController pushViewController:yourViewController withTransitionType:YSTransitionTypeFromLeft];
 ```
 
-call `popViewControllerWithTransitionType:` method if return your viewController.
+Call `popViewControllerWithTransitionType:` method when returning your viewController.
 
 ```
 [(YSNavigationController *)self.navigationController popViewControllerWithTransitionType:YSTransitionTypeFromRight];
