@@ -67,7 +67,7 @@ Call `popViewControllerWithTransitionType:` method when returning your viewContr
 [(YSNavigationController *)self.navigationController popViewControllerWithTransitionType:YSTransitionTypeFromRight];
 ```
 
-## Parameter Settings
+## Customized Parameter
 
 ```
 // Animation duration
