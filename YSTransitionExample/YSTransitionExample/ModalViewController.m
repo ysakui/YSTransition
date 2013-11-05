@@ -23,6 +23,7 @@
     closeButton.center = self.view.center;
     [closeButton setTitle:@"Dismiss" forState:UIControlStateNormal];
     [closeButton addTarget:self action:@selector(closeButtonDidTapped:) forControlEvents:UIControlEventTouchUpInside];
+    closeButton.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
     [self.view addSubview:closeButton];
 }
 

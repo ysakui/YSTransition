@@ -28,29 +28,4 @@
     return viewImage;
 }
 
-+ (NSString *)convertTransitionType:(YSTransitionType)transitionType {
-    
-    switch (transitionType) {
-        case YSTransitionTypeFromRight:
-            return kCATransitionFromRight;
-            break;
-            
-        case YSTransitionTypeFromLeft:
-            return kCATransitionFromLeft;
-            break;
-            
-        case YSTransitionTypeFromTop:
-            return kCATransitionFromTop;
-            break;
-            
-        case YSTransitionTypeFromBottom:
-            return kCATransitionFromBottom;
-            break;
-            
-        default:
-            break;
-    }
-    return kCATransitionFromBottom;
-}
-
 @end

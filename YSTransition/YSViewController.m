@@ -45,7 +45,7 @@
     baseAnimation.duration = self.transitionDuration;
     baseAnimation.delegate = self;
     baseAnimation.removedOnCompletion = NO;
-    baseAnimation.fillMode = kCAFillModeBoth;
+    baseAnimation.fillMode = kCAFillModeForwards;
     baseAnimation.fromValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
     baseAnimation.toValue   = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(0.00001, 1, 0, 0)];
     
@@ -54,9 +54,9 @@
     presentAnimation.duration = self.transitionDuration;
     presentAnimation.delegate = self;
     presentAnimation.removedOnCompletion = NO;
-    presentAnimation.fillMode = kCAFillModeBoth;
+    presentAnimation.fillMode = kCAFillModeForwards;
     presentAnimation.toValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
-    
+
     CGSize size = self.view.window.bounds.size;
     
     if (transitionType == YSTransitionTypeFromRight) {
@@ -72,7 +72,7 @@
     
     [self.animationLayer addAnimation:baseAnimation forKey:@"presentAnimation"];
     [viewController.view.layer addAnimation:presentAnimation forKey:@"presentAnimation"];
-    
+
     [self presentViewController:viewController animated:NO completion:completion];
 }
 
@@ -138,9 +138,11 @@
 - (CALayer *)animationLayer {
     if (!_animationLayer) {
         _animationLayer = [CALayer layer];
-        _animationLayer.delegate = self;
-        _animationLayer.masksToBounds = YES;
         _animationLayer.frame = CGRectMake(0, 0, self.view.window.bounds.size.width, self.view.window.bounds.size.height);
+        _animationLayer.position = CGPointMake(self.view.window.bounds.size.width, self.view.window.bounds.size.height);
+        _animationLayer.anchorPoint = CGPointMake(1, 1);
+        _animationLayer.masksToBounds = YES;
+        _animationLayer.delegate = self;
     }
     return _animationLayer;
 }

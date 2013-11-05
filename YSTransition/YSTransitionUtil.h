@@ -18,6 +18,5 @@ typedef NS_ENUM(NSInteger, YSTransitionType) {
 @interface YSTransitionUtil : NSObject
 
 + (UIImage *)getCaptureOfView:(UIView *)view;
-+ (NSString *)convertTransitionType:(YSTransitionType)transitionType;
 
 @end

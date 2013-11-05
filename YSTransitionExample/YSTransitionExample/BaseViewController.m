@@ -12,6 +12,9 @@
 #import "PushViewController.h"
 #import "ModalViewController.h"
 
+
+#define YSSYSTEM_VERSION_LESS_THAN(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+
 typedef NS_ENUM(NSInteger, TableSection) {
     TableSectionViewSetting,
     TableSectionPush,
@@ -59,7 +62,9 @@ typedef NS_ENUM(NSInteger, TableModalRow) {
     [super viewDidLoad];
     
     self.title = @"YSTransition";
-    self.view.backgroundColor = [UIColor grayColor];
+    
+    if (!YSSYSTEM_VERSION_LESS_THAN(@"7.0"))
+        self.view.backgroundColor = [UIColor grayColor];
     
     [self.view addSubview:self.tableView];
 }
@@ -109,7 +114,12 @@ typedef NS_ENUM(NSInteger, TableModalRow) {
     label.text = [self tableView:tableView titleForHeaderInSection:section];
     label.font = [UIFont boldSystemFontOfSize:16.0];
     label.backgroundColor = [UIColor clearColor];
-    label.textColor = [UIColor whiteColor];
+    
+    if (!YSSYSTEM_VERSION_LESS_THAN(@"7.0"))
+        label.textColor = [UIColor whiteColor];
+    else
+        label.textColor = [UIColor grayColor];
+    
     [headerView addSubview:label];
     return headerView;
 }
@@ -139,8 +149,11 @@ typedef NS_ENUM(NSInteger, TableModalRow) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
     
-    cell.textLabel.textColor = [UIColor whiteColor];
     cell.textLabel.font = [UIFont systemFontOfSize:12];
+    
+    if (!YSSYSTEM_VERSION_LESS_THAN(@"7.0"))
+        cell.textLabel.textColor = [UIColor whiteColor];
+    
     
     switch (indexPath.section) {
         case TableSectionViewSetting:
@@ -204,8 +217,9 @@ typedef NS_ENUM(NSInteger, TableModalRow) {
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    //    NSLog(@"willDisplayCell: %d", indexPath.row);
-    cell.backgroundColor = [UIColor clearColor];
+    
+    if (!YSSYSTEM_VERSION_LESS_THAN(@"7.0"))
+        cell.backgroundColor = [UIColor clearColor];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -323,6 +337,7 @@ typedef NS_ENUM(NSInteger, TableModalRow) {
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.backgroundColor = [UIColor clearColor];
+        _tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     }
     return _tableView;
 }

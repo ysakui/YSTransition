@@ -177,12 +177,12 @@
 		DB774FC91823BC1E008E6F29 /* YSTransition */ = {
 			isa = PBXGroup;
 			children = (
+				DB774FD71823C1BC008E6F29 /* YSViewController.h */,
+				DB774FD81823C1BC008E6F29 /* YSViewController.m */,
 				DB774FD31823C1BC008E6F29 /* YSNavigationController.h */,
 				DB774FD41823C1BC008E6F29 /* YSNavigationController.m */,
 				DB774FD51823C1BC008E6F29 /* YSTransitionUtil.h */,
 				DB774FD61823C1BC008E6F29 /* YSTransitionUtil.m */,
-				DB774FD71823C1BC008E6F29 /* YSViewController.h */,
-				DB774FD81823C1BC008E6F29 /* YSViewController.m */,
 			);
 			name = YSTransition;
 			sourceTree = "<group>";

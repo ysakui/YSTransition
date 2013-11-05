@@ -24,6 +24,7 @@
     backButton.center = self.view.center;
     [backButton setTitle:@"Back" forState:UIControlStateNormal];
     [backButton addTarget:self action:@selector(backButtonDidTapped:) forControlEvents:UIControlEventTouchUpInside];
+    backButton.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
     [self.view addSubview:backButton];
 }
 

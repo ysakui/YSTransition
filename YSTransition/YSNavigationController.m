@@ -56,7 +56,7 @@
     oldViewAnimation.duration = self.transitionDuration;
     oldViewAnimation.delegate = self;
     oldViewAnimation.removedOnCompletion = NO;
-    oldViewAnimation.fillMode = kCAFillModeBoth;
+    oldViewAnimation.fillMode = kCAFillModeForwards;
     oldViewAnimation.fromValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
     
     CABasicAnimation *nextViewAnimation = [CABasicAnimation animationWithKeyPath:@"transform"];
@@ -64,7 +64,7 @@
     nextViewAnimation.duration = self.transitionDuration;
     nextViewAnimation.delegate = self;
     nextViewAnimation.removedOnCompletion = NO;
-    nextViewAnimation.fillMode = kCAFillModeBoth;
+    nextViewAnimation.fillMode = kCAFillModeForwards;
     nextViewAnimation.toValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
     
     CGSize size = self.view.window.bounds.size;
@@ -105,9 +105,11 @@
 - (CALayer *)animationLayer {
     if (!_animationLayer) {
         _animationLayer = [CALayer layer];
-        _animationLayer.delegate = self;
-        _animationLayer.masksToBounds = YES;
         _animationLayer.frame = CGRectMake(0, 0, self.view.window.bounds.size.width, self.view.window.bounds.size.height);
+        _animationLayer.position = CGPointMake(self.view.window.bounds.size.width, self.view.window.bounds.size.height);
+        _animationLayer.anchorPoint = CGPointMake(1, 1);
+        _animationLayer.masksToBounds = YES;
+        _animationLayer.delegate = self;
     }
     return _animationLayer;
 }
